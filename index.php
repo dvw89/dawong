@@ -1,1 +1,1 @@
-Welcome, to David Wong's amazing home page!
+Welcome to David Wong's amazing home page!

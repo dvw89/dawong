@@ -1,0 +1,81 @@
+body {
+    background-color: black;
+    color:white;
+    background-image: url("../img/matrix_background.jpg");
+    background-attachment: fixed;
+}
+
+header, nav, footer {
+    text-align: center;
+}
+
+main {
+    text-align: left;
+}
+
+nav a { /*links within "nav" container */
+    font-family: 'russo one';
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration: none; /* removes underline */
+    color: blue;    /*by default, links are blue */
+}
+
+nav a:hover { /*pseudo class*/
+    color:cyan;
+    border-bottom:2px cyan solid;
+    font-size: 2em;
+    transition: .8s; /* transition effect */
+}
+
+.currentLink {
+    color: chartreuse;
+}
+
+h1 {
+    font-family: 'russo one';
+    font-size: 4em;
+    margin-bottom: 0px;
+    color: chartreuse;
+}
+
+h2 {
+    font-family: 'Russo one';
+    font-size: 3em;
+    margin-bottom: 0px;
+    color: chartreuse;
+}
+
+.examplePicture {
+    float:left;
+}
+
+.introText {
+    text-align: left;
+}
+
+strong {
+    color: DodgerBlue;
+    font-size: 1.1em;
+}
+
+i {
+    color: DodgerBlue;
+    font-size: 1.1em;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main a:hover {
+    color: cyan;
+    border-bottom: 2px cyan solid;
+    font-size: 1.1em;
+    transition: 0.8s;
+}
+
+footer {
+    font-size: 80%;
+}

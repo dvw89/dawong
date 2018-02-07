@@ -13,24 +13,37 @@ main {
     text-align: left;
 }
 
+a:visited {
+    color: Blue;
+    text-decoration: none;
+}
+
+hr {
+    width: 50%;
+}
+
+.longLine {
+    width: 90%;
+}
+
 nav a { /*links within "nav" container */
     font-family: 'russo one';
     padding:15px;
     padding-bottom:4px;
     font-size: 1.8em;
     text-decoration: none; /* removes underline */
-    color: blue;    /*by default, links are blue */
+    color: chartreuse;    /*by default, links are blue */
 }
 
 nav a:hover { /*pseudo class*/
-    color:cyan;
-    border-bottom:2px cyan solid;
+    color:orange;
+    border-bottom:2px orange solid;
     font-size: 2em;
     transition: .8s; /* transition effect */
 }
 
 .currentLink {
-    color: chartreuse;
+    color: yellow;
 }
 
 h1 {
@@ -70,12 +83,27 @@ main a {
 }
 
 main a:hover {
-    color: cyan;
-    border-bottom: 2px cyan solid;
+    color: orange;
+    border-bottom: 2px orange solid;
+    font-size: 1.1em;
+    transition: 0.8s;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: orange;
+    border-bottom: 2px orange solid;
     font-size: 1.1em;
     transition: 0.8s;
 }
 
 footer {
     font-size: 80%;
+}
+
+footer img {
+    float: left
 }

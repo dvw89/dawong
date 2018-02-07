@@ -13,6 +13,10 @@ main {
     text-align: left;
 }
 
+.currentLink {
+    color: yellow;
+}
+
 a:visited {
     color: Blue;
     text-decoration: none;
@@ -40,10 +44,6 @@ nav a:hover { /*pseudo class*/
     border-bottom:2px orange solid;
     font-size: 2em;
     transition: .8s; /* transition effect */
-}
-
-.currentLink {
-    color: yellow;
 }
 
 h1 {

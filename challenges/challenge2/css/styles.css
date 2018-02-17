@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+}
+
+.column {
+ text-align: center;
+ width: 50%;
+}
+
+#row:after{
+    content: "";
+    display: table;
+    clear: both;
+}

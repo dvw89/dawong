@@ -65,3 +65,15 @@
         margin:0 auto;
         padding-top:10px;
     }
+    
+    #buddy {
+        margin-left:auto;
+        margin-right:auto;
+        max-width:50%;
+    }
+    
+    #csumb {
+        margin-left:auto;
+        margin-right:auto;
+        max-width:50%;
+    }

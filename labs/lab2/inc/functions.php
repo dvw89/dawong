@@ -8,10 +8,13 @@
                     echo "<audio autoplay> <source src='sounds/fanfare.wav' type=audio/wav> Your browser doesn't support the victory audio! </audio>";
                     break;
                 case 1: $totalPoints = 500;
+                    echo "<audio autoplay> <source src='sounds/fanfare.wav' type=audio/wav> Your browser doesn't support the victory audio! </audio>";
                     break;
                 case 2: $totalPoints = 250;
+                    echo "<audio autoplay> <source src='sounds/fanfare.wav' type=audio/wav> Your browser doesn't support the victory audio! </audio>";
                     break;
                 case 3: $totalPoints = 900;
+                    echo "<audio autoplay> <source src='sounds/fanfare.wav' type=audio/wav> Your browser doesn't support the victory audio! </audio>";
                     break;
             }
                     

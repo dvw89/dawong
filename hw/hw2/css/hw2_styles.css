@@ -1,0 +1,20 @@
+html {
+    background-image:url("../img/poker_background.jpg");
+    color: white;
+}
+
+header h1 {
+    font-family: 'Dancing Script';
+}
+
+header {
+    font-family: 'Amaranth';
+}
+
+hr {
+    width: 90%;
+}
+
+body {
+    font-family: 'Kalam';
+}

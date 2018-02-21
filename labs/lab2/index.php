@@ -19,8 +19,8 @@
         </div>
         <br />
         <footer>
-            <img id="buddy" src="img/buddy_verified.png" alt="Buddy verification." />
-            <img src="img/csumb_small_logo.jpg" alt="CSUMB logo." />
+            <img id="buddy" src="img/buddy_verified.png" alt="Buddy verification." /> <br />
+            <img id="csumb" src="img/csumb_small_logo.jpg" alt="CSUMB logo." />
         </footer>
     </body>
 </html>

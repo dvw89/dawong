@@ -167,9 +167,6 @@
         echo "$player_totals[3]";
         echo "</div><hr /><br>";
         
-        echo "<br>";
-        echo "<hr />";
-        
         echo "<div class='winnersDisplay'>";
         if (count($winners) > 0) {
             foreach($winners as $winner) {
@@ -189,7 +186,7 @@
         $_SESSION['totalTime'] += $current_run;
         $average_time = $_SESSION['totalTime'] / $_SESSION['numRuns'];
         echo "<div>";
-        echo "Time elapsed: $current_run seconds.<br />";
+        echo "Time elapsed: " . number_format($current_run, 14) . " seconds.<br />";
         echo "Average elapsed time: " . number_format($average_time, 14) . " seconds.<br />";
         echo "Number of games played: " . $_SESSION['numRuns'];
         echo "</div>";

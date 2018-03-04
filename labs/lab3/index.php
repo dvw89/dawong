@@ -30,7 +30,6 @@ $_SESSION['currentRunStart'] = microtime(true);
                 play();
             ?>
         </main>
-        <hr />
         <footer>
             <img src="img/csumb_logo2.jpg" alt="CSUMB logo"/>
             <div>

@@ -1,8 +1,0 @@
-<?php
-    $start = microtime(true);
-    
-    
-
-
-
-?>

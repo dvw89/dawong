@@ -1,0 +1,19 @@
+body {
+    color: white;
+    font-family: 'Play', sans-serif;
+    font-size: 1.3em
+}
+
+hr {
+    border-width: 10px;
+    border-color: black;
+    display: block;
+}
+
+.btn-group-horizontal {
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Black Ops One';
+}

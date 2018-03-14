@@ -529,3 +529,24 @@
 [21-Feb-2018 04:30:31 UTC] PHP   2. play() /home/ubuntu/workspace/dawong/hw/hw2/index.php:30
 [21-Feb-2018 04:30:31 UTC] PHP   3. playGame() /home/ubuntu/workspace/dawong/hw/hw2/inc/functions.php:182
 [21-Feb-2018 04:30:31 UTC] PHP   4. printPlayerCards() /home/ubuntu/workspace/dawong/hw/hw2/inc/functions.php:178
+[12-Mar-2018 19:49:09 UTC] PHP Fatal error:  Call to undefined function displayResults() in /home/ubuntu/workspace/dawong/hw/hw3/index.php on line 123
+[12-Mar-2018 19:49:09 UTC] PHP Stack trace:
+[12-Mar-2018 19:49:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/hw/hw3/index.php:0
+[12-Mar-2018 19:50:34 UTC] PHP Fatal error:  Call to undefined function displayResults() in /home/ubuntu/workspace/dawong/hw/hw3/index.php on line 124
+[12-Mar-2018 19:50:34 UTC] PHP Stack trace:
+[12-Mar-2018 19:50:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/hw/hw3/index.php:0
+[12-Mar-2018 19:50:53 UTC] PHP Fatal error:  Call to undefined function displayResults() in /home/ubuntu/workspace/dawong/hw/hw3/index.php on line 124
+[12-Mar-2018 19:50:53 UTC] PHP Stack trace:
+[12-Mar-2018 19:50:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/hw/hw3/index.php:0
+[12-Mar-2018 19:51:02 UTC] PHP Fatal error:  Call to undefined function displayResults() in /home/ubuntu/workspace/dawong/hw/hw3/index.php on line 124
+[12-Mar-2018 19:51:02 UTC] PHP Stack trace:
+[12-Mar-2018 19:51:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/hw/hw3/index.php:0
+[12-Mar-2018 19:51:26 UTC] PHP Fatal error:  Call to undefined function displayResults() in /home/ubuntu/workspace/dawong/hw/hw3/index.php on line 124
+[12-Mar-2018 19:51:26 UTC] PHP Stack trace:
+[12-Mar-2018 19:51:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/hw/hw3/index.php:0
+[12-Mar-2018 19:51:40 UTC] PHP Fatal error:  Call to undefined function displayResults() in /home/ubuntu/workspace/dawong/hw/hw3/index.php on line 124
+[12-Mar-2018 19:51:40 UTC] PHP Stack trace:
+[12-Mar-2018 19:51:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/hw/hw3/index.php:0
+[12-Mar-2018 19:52:11 UTC] PHP Fatal error:  Call to undefined function displayResults() in /home/ubuntu/workspace/dawong/hw/hw3/index.php on line 124
+[12-Mar-2018 19:52:11 UTC] PHP Stack trace:
+[12-Mar-2018 19:52:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/hw/hw3/index.php:0

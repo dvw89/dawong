@@ -68,3 +68,83 @@
 [04-Mar-2018 06:16:37 UTC] PHP Fatal error:  Call to undefined function checkCategory() in /home/ubuntu/workspace/dawong/labs/lab4/index.php on line 84
 [04-Mar-2018 06:16:37 UTC] PHP Stack trace:
 [04-Mar-2018 06:16:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab4/index.php:0
+[12-Mar-2018 22:16:45 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 9
+[12-Mar-2018 22:16:45 UTC] PHP Stack trace:
+[12-Mar-2018 22:16:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab6/index.php:0
+[12-Mar-2018 22:16:45 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/dawong/labs/lab6/index.php:42
+[12-Mar-2018 22:16:52 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 9
+[12-Mar-2018 22:16:52 UTC] PHP Stack trace:
+[12-Mar-2018 22:16:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab6/index.php:0
+[12-Mar-2018 22:16:52 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/dawong/labs/lab6/index.php:42
+[12-Mar-2018 22:18:18 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 9
+[12-Mar-2018 22:18:18 UTC] PHP Stack trace:
+[12-Mar-2018 22:18:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab6/index.php:0
+[12-Mar-2018 22:18:18 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/dawong/labs/lab6/index.php:43
+[12-Mar-2018 22:18:22 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 9
+[12-Mar-2018 22:18:22 UTC] PHP Stack trace:
+[12-Mar-2018 22:18:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab6/index.php:0
+[12-Mar-2018 22:18:22 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/dawong/labs/lab6/index.php:43
+[12-Mar-2018 22:19:15 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 9
+[12-Mar-2018 22:19:15 UTC] PHP Stack trace:
+[12-Mar-2018 22:19:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab6/index.php:0
+[12-Mar-2018 22:19:15 UTC] PHP   2. displayCategories() /home/ubuntu/workspace/dawong/labs/lab6/index.php:43
+[12-Mar-2018 22:29:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:43
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(43): PDOStatement->execute()
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(96): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 43
+[12-Mar-2018 22:29:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:43
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(43): PDOStatement->execute()
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(96): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 43
+[12-Mar-2018 22:31:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:43
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(43): PDOStatement->execute()
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(96): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 43
+[12-Mar-2018 22:35:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE '%tv%'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(52): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(108): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 52
+[12-Mar-2018 22:36:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE '%tv%'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:52
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(52): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(105): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 52
+[12-Mar-2018 22:40:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE '%ball%'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:53
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(53): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(106): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 53
+[12-Mar-2018 22:40:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE '%ball%'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:53
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(53): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(106): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 53
+[12-Mar-2018 22:41:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE '%ball%'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:53
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(53): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(106): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 53
+[12-Mar-2018 22:45:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '4'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:56
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(56): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(109): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 56
+[12-Mar-2018 22:45:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '3'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab6/index.php:56
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab6/index.php(56): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/dawong/labs/lab6/index.php(109): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab6/index.php on line 56

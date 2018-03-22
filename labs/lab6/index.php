@@ -46,10 +46,30 @@
             }
                   
                   
-             if (!empty($_GET['category'])) { //checks whether user has typed something in the "Product" text box
+            if (!empty($_GET['category'])) { //checks whether user has typed something in the "Category" text box
                  $sql .=  " AND catId = :categoryId";
                  $namedParameters[":categoryId"] =  $_GET['category'];
-            }        
+            }
+            
+            if (!empty($_GET['priceFrom'])) { //checks whether user has typed something in the "Price from" text box
+                 $sql .=  " AND price >= :priceFrom";
+                 $namedParameters[":priceFrom"] =  $_GET['priceFrom'];
+            }
+            
+            if (!empty($_GET['priceTo'])) { //checks whether user has typed something in the "Price to" text box
+                 $sql .=  " AND price <= :priceTo";
+                 $namedParameters[":priceTo"] =  $_GET['priceTo'];
+            }
+            
+            if (isset($_GET['orderBy'])) { //checks whether if the user has checked the "order by" radio buttons.
+                 if ($_GET['orderBy'] == "price") {
+                     $sql .= " ORDER BY price";
+                 }
+                 
+                 else if ($_GET['orderBy'] == "name") {
+                     $sql .= " ORDER BY productName";
+                 }
+            }
             
             //echo $sql; //for debugging purposes
             
@@ -58,8 +78,9 @@
              $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
             foreach ($records as $record) {
-            
-                 echo  $record["productName"] . " " . $record["productDescription"] . "<br />";
+                
+                echo "<a href = \"purchaseHistory.php?productId=" . $record["productId"] . "\"> History </a>";
+                echo  $record["productName"] . " " . $record["productDescription"] . " $" . $record["price"] . "<br /> <br />";
             
             }
         }

@@ -27,7 +27,7 @@
     if ($records[0]['purchaseDate'] != NULL) {
         foreach ($records as $record) {
             echo "Purchase Date: " . $record["purchaseDate"] . "<br />";
-            echo "Unit Price: " . $record["unitPrice"] . "<br />";
+            echo "Unit Price: $" . $record["unitPrice"] . "<br />";
             echo "Quantity: " . $record["quantity"] . "<br />";
         }
     }
@@ -38,6 +38,9 @@
     <head>
         <title> </title>
     </head>
+    <style>
+    @import url("css/styles.css");
+    </style>
     <body>
 
     </body>

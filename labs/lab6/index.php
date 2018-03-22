@@ -94,7 +94,11 @@
 <html>
     <head>
         <title> OtterMart Product Search </title>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     </head>
+    <style>
+    @import url("css/styles.css");
+    </style>
     <body>
 
         <h1>  OtterMart Product Search </h1>

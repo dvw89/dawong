@@ -13,3 +13,10 @@
 [07-Feb-2018 23:05:50 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/dawong/practice/randomColor.php on line 10
 [07-Feb-2018 23:05:50 UTC] PHP Stack trace:
 [07-Feb-2018 23:05:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/practice/randomColor.php:0
+[28-Mar-2018 21:05:37 UTC] PHP Fatal error:  Call to undefined function displayItinerary() in /home/ubuntu/workspace/dawong/midterm/program1.php on line 51
+[28-Mar-2018 21:05:37 UTC] PHP Stack trace:
+[28-Mar-2018 21:05:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/midterm/program1.php:0
+[28-Mar-2018 22:16:04 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/dawong/midterm/program1.php on line 58
+[28-Mar-2018 22:16:04 UTC] PHP Stack trace:
+[28-Mar-2018 22:16:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/midterm/program1.php:0
+[28-Mar-2018 22:16:04 UTC] PHP   2. displayItinerary() /home/ubuntu/workspace/dawong/midterm/program1.php:148

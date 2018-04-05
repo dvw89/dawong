@@ -14,7 +14,9 @@
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         print_r($records);
+    }
     
+    question1();
 ?>
 
 <!DOCTYPE html>

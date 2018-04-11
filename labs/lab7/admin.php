@@ -1,20 +1,23 @@
 <?php
 
     session_start();
+    if (!isset($_SESSION['adminName'])) {
+        header("Location:index.php");
+    }
+    include "../../dbConnection.php";
+    $conn = getDatabaseConnection("ottermart");
 
     function displayAllProducts() {
+        global $conn;
         
-        $conn = getDatabaseConnection("product");
-        
-        $sql = "SELECT productName, productDescription, price FROM 'om_product' ORDER BY productName";
+        $sql = "SELECT * FROM om_product";
         
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-        $record = $stmt->fetch(PDO::FETCH_ASSOC);
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        foreach ($record as $item) {
-            echo $item['productName'] . " " . $item["productDescription"] . " $" . $record['price'] . "<br/>";
-        }
+        return $records;
+        
     }
 
 ?>
@@ -30,11 +33,24 @@
         
         <h3> Welcome <?=$_SESSION['adminName']?> </h3>
         
-        <br />
+        <br>
+        <form action='addProduct.php'>
+            <input type='submit' name='addProduct' value='Add Product'/>
+        </form>
+        <br>
         
         <strong> Products: </strong>
         
-        <?=displayAllProducts()?>
+        <?php $records = displayAllProducts();
+        
+        foreach ($records as $item) {
+            echo $item['productName'];
+            echo "<br>";
+        }
+        
+        ?>
+        
+        
         
     </body>
 </html>

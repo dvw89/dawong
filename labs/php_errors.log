@@ -270,3 +270,24 @@ Stack trace:
 [19-Mar-2018 20:19:32 UTC] PHP Fatal error:  Call to undefined function displayCart() in /home/ubuntu/workspace/dawong/labs/lab5/scart.php on line 33
 [19-Mar-2018 20:19:32 UTC] PHP Stack trace:
 [19-Mar-2018 20:19:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab5/scart.php:0
+[08-Apr-2018 22:47:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_product' ORDER BY productName' at line 1' in /home/ubuntu/workspace/dawong/labs/lab7/admin.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab7/admin.php(16): PDOStatement->execute()
+#1 /home/ubuntu/workspace/dawong/labs/lab7/admin.php(42): displayAllProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab7/admin.php on line 16
+[08-Apr-2018 22:48:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_product' ORDER BY productName' at line 1' in /home/ubuntu/workspace/dawong/labs/lab7/admin.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab7/admin.php(16): PDOStatement->execute()
+#1 /home/ubuntu/workspace/dawong/labs/lab7/admin.php(44): displayAllProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab7/admin.php on line 16
+[08-Apr-2018 22:49:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_product'' at line 1' in /home/ubuntu/workspace/dawong/labs/lab7/admin.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab7/admin.php(16): PDOStatement->execute()
+#1 /home/ubuntu/workspace/dawong/labs/lab7/admin.php(44): displayAllProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab7/admin.php on line 16
+[09-Apr-2018 00:24:58 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/dawong/labs/lab7/addProduct.php on line 6
+[09-Apr-2018 00:24:58 UTC] PHP Stack trace:
+[09-Apr-2018 00:24:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab7/addProduct.php:0

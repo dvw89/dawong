@@ -11,19 +11,32 @@
     
     //echo $password;
     
+    /*following SQL does NOT prevent SQL injection.
     $sql = "SELECT *
             FROM om_admin
             WHERE username = '$username'
-            AND password = 'password'";
+            AND password = '$password'";
+    */
+    
+    // the following code, though, prevents SQL injection.
+    $sql = "SELECT *
+            FROM om_admin
+            WHERE username = :username
+            AND password = :password";
+            
+    $np = array();
+    $np[':username'] = $username;
+    $np[':password'] = $password;
+    
     
     $stmt = $conn->prepare($sql);
-    $stmt->execute();
+    $stmt->execute($np);
     $record = $stmt->fetch(PDO::FETCH_ASSOC); // expecting one single record
     
     print_r($record);
     
     if(empty($record)) {
-        echo "Wrong username or password! <br/>";
+        echo "Wrong username or password!";
     }
     else {
         //echo $record['firstName'] . " " . $record['lastName'];

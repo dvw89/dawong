@@ -291,3 +291,6 @@ Stack trace:
 [09-Apr-2018 00:24:58 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/dawong/labs/lab7/addProduct.php on line 6
 [09-Apr-2018 00:24:58 UTC] PHP Stack trace:
 [09-Apr-2018 00:24:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab7/addProduct.php:0
+[15-Apr-2018 00:37:44 UTC] PHP Fatal error:  Call to undefined function start_session() in /home/ubuntu/workspace/dawong/labs/lab7/index.php on line 2
+[15-Apr-2018 00:37:44 UTC] PHP Stack trace:
+[15-Apr-2018 00:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab7/index.php:0

@@ -294,3 +294,38 @@ Stack trace:
 [15-Apr-2018 00:37:44 UTC] PHP Fatal error:  Call to undefined function start_session() in /home/ubuntu/workspace/dawong/labs/lab7/index.php on line 2
 [15-Apr-2018 00:37:44 UTC] PHP Stack trace:
 [15-Apr-2018 00:37:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/dawong/labs/lab7/index.php:0
+[28-Apr-2018 20:51:30 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php on line 15
+[28-Apr-2018 20:51:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php on line 15
+[28-Apr-2018 20:53:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php on line 15
+[28-Apr-2018 20:56:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php on line 15
+[28-Apr-2018 21:05:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php on line 15
+[28-Apr-2018 21:05:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php on line 15
+[28-Apr-2018 21:06:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/dawong/labs/lab9/checkUsernameAPI.php on line 15

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangman</title>
+        <link  href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <div class='container text-center'>
+            <header>
+               <h1>Hangman</h1>
+            </header>
+            
+            <div id="word"></div>
+            <div id="letters"></div>
+            <div id="hint">
+                <button class="hintBtn">Need a Hint?</button>
+            </div>
+            
+            <div id="hintText"></div>
+            
+            <div id="won">
+                <h2>You Won!</h2>
+                <button class="replayBtn btn btn-success">Play Again</button>
+            </div>
+            <div id="lost">
+                <h2>You Lost!</h2>
+                <button class="replayBtn btn btn-warning">Play Again</button>
+            </div>
+            
+            <div id="man">
+               <img src="img/stick_0.png" id="hangImg">
+            </div>
+            
+            <div id='successes'>
+                Words you've guessed so far:
+            </div>
+        </div>
+        
+        <script language="javascript">
+        
+            //VARIABLES
+            var selectedWord="";
+            var selectedHint = "";
+            var board = [];
+            var remainingGuesses = 6;
+            var guessedWords = [];
+            var hintShown = false;
+            var words = [{word: "snake", hint: "It's a reptile"},
+            {word: "monkey", hint: "It's a mammal"},
+            {word: "beetle", hint: "It's an insect"},
+            {word: "horse", hint: "It runs fast"},
+            {word: "dog", hint: "It has a long snout"}];
+            // Creating an array of available letters
+            var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
+                'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
+                'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+            
+            //EVENTS
+            window.onload = startGame();
+            $(".letter").click(function() {
+                checkLetter($(this).attr('id'));
+                disableButton($(this));
+            });
+            $(".hintBtn").on("click", function() {
+                if (remainingGuesses > 1 && hintShown == false) {
+                    $("#hintText").text(selectedHint);
+                    remainingGuesses -= 1;
+                    updateMan();
+                    hintShown = true;
+                }
+                else if (remainingGuesses == 1 && hintShown == false) {
+                    $("#hintText").text("Showing the hint costs a body part! You have too few guesses left!");
+                    hintShown = true;
+                }
+            });
+            $(".replayBtn").on("click", function() {
+                selectedWord = "";
+                selectedHint = "";
+                $("#hintText").text("");
+                remainingGuesses = 6;
+                updateMan();
+                hintShown = false;
+                enableLetters();
+                board = [];
+                pickWord();
+                initBoard();
+                updateBoard();
+                $('#won').hide();
+                $('#lost').hide();
+                $('#letters').show();
+            });
+            
+            
+            // FUNCTIONS
+            function startGame() {
+                pickWord();
+                initBoard();
+                updateBoard();
+                createLetters();
+            }
+            
+            function initBoard() {
+                for (var letter in selectedWord) {
+                    board.push("_");
+                }
+            }
+            
+            function pickWord() {
+                var randomInt = Math.floor(Math.random() * words.length);
+                selectedWord = words[randomInt].word.toUpperCase();
+                selectedHint = words[randomInt].hint;
+            }
+            
+            function updateBoard() {
+                $("#word").empty();
+                
+                for (var letter of board) {
+                    document.getElementById("word").innerHTML += letter + " ";
+                }
+                
+                $("#word").append("<br />");
+            }
+            
+            function createLetters() {
+                for (var letter of alphabet) {
+                    $("#letters").append("<button class='letter' id='" + letter + "'>" + letter + "</button>");
+                }
+            }
+            
+            function enableLetters() {
+                $(".btn-danger").prop("disabled", false);
+                $(".btn-danger").attr("class", "letter");
+            }
+            
+            function checkLetter(letter) {
+                var positions = new Array();
+                
+                // Put all the positions the letter exists in an array
+                for (var i = 0; i < selectedWord.length; i++) {
+                    if (letter == selectedWord[i]) {
+                        positions.push(i);
+                    }
+                }
+                
+                if (positions.length > 0) {
+                    updateWord(positions, letter);
+                
+                    if (!board.includes('_')) {
+                        endGame(true);
+                    }
+                } 
+                else {
+                    remainingGuesses -= 1;
+                    updateMan();
+                }
+                
+                if (remainingGuesses <= 0) {
+                    endGame(false);
+                }
+            }
+            
+            function updateWord(positions, letter) {
+                for (var pos of positions) {
+                    board[pos] = letter;
+                }
+                
+                updateBoard();
+            }
+            
+            function endGame(win) {
+                $("#letters").hide();
+                
+                if (win) {
+                    guessedWords.push(selectedWord);
+                    $('#successes').append(selectedWord + "<br>");
+                    $('#won').show();
+                }
+                else {
+                    $('#lost').show();
+                }
+            }
+            
+            function updateMan() {
+                $("#hangImg").attr("src", "img/stick_" + (6 - remainingGuesses) + ".png");
+            }
+            
+            function disableButton(btn) {
+                btn.prop("disabled",true);
+                btn.attr("class","btn btn-danger");
+            }
+            
+        </script>
+
+    </body>
+</html>

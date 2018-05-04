@@ -2,7 +2,7 @@
 
    include '../../../dbConnection.php';
 
-      $conn = getDatabaseConnection('pets');
+      $conn = getDatabaseConnection('');
       
       $sql = "SELECT *, YEAR(CURDATE()) - yob age FROM pets WHERE id = :id";
       

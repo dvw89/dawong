@@ -21,10 +21,17 @@
 <script>
     
     $(document).ready(function(){
-        
+    
+            $("#adoptionsLink").addClass("active");
+            
             $(".petLink").click(function(){
                 
                 //alert(  );
+                
+                $('#petModal').modal("show");
+                $("#petInfo").html("<img src='img/loading.gif'>");
+                      
+                
                 $.ajax({
 
                     type: "GET",
@@ -35,7 +42,9 @@
                        //alert(data.breed);
                        //log.console(data.pictureURL);
                        
-                       $("#petInfo").html("<h2>" + data.name +"</h2>");
+                       $("#petModalLabel").html("<h2>" + data.name +"</h2>");
+                       $("#petInfo").html("");
+                       $("#petInfo").append("Age: " + data.age + " years <br>");
                        $("#petInfo").append(data.breed + "<br>");
                        $("#petInfo").append(data.description + "<br>");
                        $("#petInfo").append("<img src='img/" + data.pictureURL +"' width='150'>");
@@ -73,7 +82,27 @@
 ?>
 
 
-<div id="petInfo"></div>
+<!-- Modal -->
+<div class="modal fade" id="petModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="petModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          
+        <div id="petInfo"></div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <?php

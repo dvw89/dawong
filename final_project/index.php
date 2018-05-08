@@ -43,14 +43,14 @@
             $sql = "SELECT * FROM dm_product WHERE 1";
             
             if (!empty($_GET['product'])) { //checks whether user has typed something in the "Product" text box
-                 $sql .=  " AND Name LIKE :productName";
+                 $sql .=  " AND prodName LIKE :productName";
                  $namedParameters[":productName"] = "%" . $_GET['product'] . "%";
             }
                   
                   
             if (!empty($_GET['category'])) { //checks whether user has typed something in the "Category" text box
                  $sql .=  " AND catId = :categoryId";
-                 $namedParameters[":catId"] =  $_GET['category'];
+                 $namedParameters[":categoryId"] =  $_GET['category'];
             }
             
             if (!empty($_GET['priceFrom'])) { //checks whether user has typed something in the "Price from" text box
@@ -69,7 +69,7 @@
                  }
                  
                  else if ($_GET['orderBy'] == "name") {
-                     $sql .= " ORDER BY Name";
+                     $sql .= " ORDER BY prodName";
                  }
             }
             
@@ -82,7 +82,7 @@
             foreach ($records as $record) {
                 
                 echo "<a href = \"purchaseHistory.php?productId=" . $record["productId"] . "\"> History </a>";
-                echo  $record["Name"] . " $" . $record["price"] . "<br /> <br />";
+                echo  $record["prodName"] . " $" . $record["price"] . "<br />";
             
             }
         }

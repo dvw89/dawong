@@ -31,15 +31,16 @@ $total_sales = round($total_sales, 2);
     </head>
     <body>
         <h1>Vital Statistics</h1>
-        <div>Total sales: <?php echo $total_sales ?></div>
+        <div>Total sales: <?php echo "$" . $total_sales ?></div>
         <hr> <br>
-        <div> Average price of item: <?php echo $average ?></div>
+        <div> Average price of item: <?php echo "$" . $average ?></div>
         <hr> <br>
-        <div>Number of products in store: <?php echo "" . $count . "" ?></div>
+        <div>Number of products in store: <?php echo $count ?></div>
         <hr> <br>
-        <div>Most expensive item: <?php echo "" . $most_expensive . " " . $max . ""?></div>
+        <div>Most expensive item: <?php echo $most_expensive . " $" . $max . ""?></div>
         <hr> <br>
-        <div>Least expensive item: <?php echo "" . $least_expensive . " " . $min . ""?></div>
+        <div>Least expensive item: <?php echo $least_expensive . " $" . $min . ""?></div>
         <hr> <br>
+        <a href="admin.php">Back to admin page.</a>
     </body>
 </html>
